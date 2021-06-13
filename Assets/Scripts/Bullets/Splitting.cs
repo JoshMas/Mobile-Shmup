@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This bullet spawns more bullets in bursts around it
+/// </summary>
 public class Splitting : BulletCore
 {
 

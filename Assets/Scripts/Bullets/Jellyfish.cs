@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This bullet moves in straight line bursts, reorienting towards the player at the end of each burst
+/// </summary>
 public class Jellyfish : BulletCore
 {
 

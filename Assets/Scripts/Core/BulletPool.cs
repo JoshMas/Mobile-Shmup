@@ -1,7 +1,9 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// The object pool for the bullets
+/// </summary>
 public class BulletPool : MonoSingleton<BulletPool>
 {
 
@@ -14,6 +16,13 @@ public class BulletPool : MonoSingleton<BulletPool>
         bulletPool = new List<BulletCore>();
     }
 
+    /// <summary>
+    /// Gets the required bullet from the object pool if it exists
+    /// Otherwise, it instantiates a new bullet and adds it to the pool
+    /// </summary>
+    /// <param name="bullet">The type of bullet needed</param>
+    /// <param name="position">The position to spawn it at</param>
+    /// <param name="rotation">The rotation to spawn it at</param>
     public void CreateBullet(GameObject bullet, Vector3 position, Quaternion rotation)
     {
         BulletCore tempBullet = FindBullet(bullet.GetComponent<BulletCore>());
@@ -31,6 +40,11 @@ public class BulletPool : MonoSingleton<BulletPool>
         }
     }
 
+    /// <summary>
+    /// Finds a bullet in the pool
+    /// </summary>
+    /// <param name="bulletToMatch">The type of bullet needed</param>
+    /// <returns>The first matching bullet, or null if it doesn't exist</returns>
     private BulletCore FindBullet(BulletCore bulletToMatch)
     {
         foreach(BulletCore bullet in bulletPool)

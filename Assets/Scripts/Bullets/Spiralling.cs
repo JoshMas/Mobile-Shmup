@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This bullet's rotation and speed changes over time
+/// </summary>
 public class Spiralling : BulletCore
 {
 

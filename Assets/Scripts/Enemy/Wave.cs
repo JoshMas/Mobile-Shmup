@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This class went unused
+/// </summary>
 public class Wave : MonoBehaviour
 {
     [SerializeField]

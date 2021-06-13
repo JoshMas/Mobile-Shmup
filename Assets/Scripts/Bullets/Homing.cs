@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This version of the bullet script has the bullet turn towards the player's position
+/// </summary>
 public class Homing : BulletCore
 {
     private void Start()
